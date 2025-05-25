@@ -1,0 +1,30 @@
+.mainContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue;
+}
+.header{
+    /* background-color: aqua; /
+}
+.p1{
+    / background-color: blue; /
+}
+.p2{
+    / background-color: gray; */
+}
+.div2{
+    background-color: orange;
+}
+.btn-1{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: darkgreen;
+    border: solid 1px white;
+}
