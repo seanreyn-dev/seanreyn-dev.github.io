@@ -33,6 +33,7 @@ nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 nav ul {
@@ -64,9 +65,6 @@ section p {
     margin-bottom: 1rem;
 }
 
-/* a {
-    transition: color 0.2s ease;
-} */
 
 #hero {
     text-align: center;
@@ -109,11 +107,43 @@ section p {
     text-decoration: underline;
 }
 
+#contact ul {
+    list-style: none;
+    display:flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-left: 0;
+}
+
 #contact ul li a {
-    text-decoration: none;
     color: var(--color-accent);
+    font-size: 1.5rem;
+    transition: color 0.2s ease;
 }
 
 #contact ul li a:hover {
-    text-decoration: underline;
+    color: var(--color-accent-light);
+}
+
+#nav-links {
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+#nav-links.open {
+    display: flex;
+}
+
+.nav-right {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+    position: flex-end;
+}
+
+.burger {
+    font-size: 1.5rem;
+    cursor: pointer;
 }
