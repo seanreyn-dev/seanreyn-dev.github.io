@@ -1,76 +1,90 @@
-<!-- you can find the skeleton for html page online just search html skeleton -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sean Reynolds | Portfolio</title>
-    <!-- Add in your <head> of index.html -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- input external style sheet -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <!-- input js "script" -->
-    <script src="index.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sean Reynolds | Portfolio</title>
+
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <h1> Sean Reynolds</h1>
-            <div class="nav-right">
-                <ul id="nav-links" class="">
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#resume.pdf" target="_blank">Resume</a></li>
-                </ul>
-                <div class="burger" id="burger">&#9776;</div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1>Sean Reynolds</h1>
+      <div class="nav-right">
+        <ul id="nav-links">
+          <li><a href="index.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+        <div class="burger" id="burger">&#9776;</div>
+      </div>
+    </nav>
+  </header>
 
-<section id="hero">
-    <h2>Hi, I'm Sean 👋</h2>
-    <p>Aspiring Software Engineer passionate about building useful tools & clean code.</p>
-</section>
+  <main>
+    <section id="hero" class="fade-in" style="transition-delay: 0.1s">
+      <h2>Hi, I'm Sean 👋</h2>
+      <p>Aspiring Software Engineer passionate about building useful tools & clean code.</p>
+    </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I'm an IT Consultant and aspiring Software Engineer. I'm currently completing courses in
+    <section id="about" class="fade-in" style="transition-delay: 0.2s">
+      <h2>About Me</h2>
+      <p>I'm an IT Consultant and aspiring Software Engineer. I'm currently completing courses in
         Python, participating in hackathons, and I'm currently building a credit journey 
         app and this very website!</p>
-</section>
+    </section>
 
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-        <div class="project-card">
-            <h3>Waleet</h3>
-            <p> A credit journey assistant that recommends credit cards based on spending habits.</p>
-            <a href="https://github.com/seanreyn-dev/waleet" target="_blank">View on Github</a>
+    <section id="projects" class="fade-in" style="transition-delay: 0.3s">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-card fade-in" style="transition-delay: 0.4s">
+          <h3>Waleet</h3>
+          <p>A credit journey assistant that recommends credit cards based on spending habits.</p>
+          <a href="https://github.com/seanreyn-dev/waleet" target="_blank">View on GitHub</a>
         </div>
-        <div class="project-card">
-            <h3>Personal Website</h3>
-            <p> My personal website to display my projects!</p>
-            <a href="https://github.com/seanreyn-dev/seanreyn-dev.github.io" target="_blank">View on Github</a>
+        <div class="project-card fade-in" style="transition-delay: 0.5s">
+          <h3>Personal Website</h3>
+          <p>My personal website to display my projects!</p>
+          <a href="https://github.com/seanreyn-dev/seanreyn-dev.github.io" target="_blank">View on GitHub</a>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Let's Connect!</p>
-    <ul>
+    <section id="stack" class="fade-in" style="transition-delay: 0.6s">
+      <h2>Tech Stack</h2>
+      <ul class="stack-list">
+        <li>Python</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="fade-in" style="transition-delay: 0.7s">
+      <h2>Contact</h2>
+      <p>Let's Connect!</p>
+      <ul>
         <li><a href="mailto:seanreyn.dev@gmail.com"><i class="fas fa-envelope"></i></a></li>
         <li><a href="https://github.com/seanreyn-dev" target="_blank"><i class="fab fa-github"></i></a></li>
         <li><a href="https://linkedin.com/in/seanreyn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-    </ul>
-</section>
+      </ul>
+    </section>
+  </main>
 
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" title="Toggle dark mode">🌙</button>
 
   <footer>
-    <button id="theme-toggle">🌙</button>
     <p>© 2025 Sean Reynolds. Built with 💻 + ☕</p>
   </footer>
 </body>
