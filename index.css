@@ -64,7 +64,7 @@ p, li, a {
 }
 
 header {
-  background-color: var(--color-dark);
+  background-color: var(--color-light);
   color: white;
   padding: 1rem;
 }
@@ -93,7 +93,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-section {
+section:not(#hero) {
   margin: 2rem 0;
   padding: 3rem 1rem;
   max-width: 700px;
@@ -112,23 +112,34 @@ section p {
 }
 
 #hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;        /* full viewport height */
+  padding: 0 1rem;          /* just a little side padding */
+  background: var(transparent);  /* or swap in an image/gradient */
   text-align: center;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-  padding: 2.5rem 1rem;
-  min-height: unset;
-  background-color: transparent;
 }
 
-#hero h2, #hero p {
+#hero h1, #hero p {
   animation: fadeSlideIn 0.8s ease forwards;
 }
 
-#hero h2 {
+#hero h1 {
+  font-size: 3rem;          /* feel free to tweak */
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  opacity: 0;               /* animate in */
+  animation: fadeSlideIn 0.8s ease forwards;
   animation-delay: 0.2s;
 }
 
 #hero p {
+  font-size: var(--font-size-lg);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeSlideIn 0.8s ease forwards;
   animation-delay: 0.4s;
 }
 
@@ -317,4 +328,17 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.scroll-down {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: var(--color-accent_);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(10px);}
+
 }
