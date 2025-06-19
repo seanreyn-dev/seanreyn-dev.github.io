@@ -1,7 +1,7 @@
 :root {
   --color-bg: #0d1117;
   --color-text: #c9d1d9;
-  --color-accent: #58a6ff;
+  --color-accent: #ffffff;
   --color-accent-light: #79c0ff;
   --color-dark: #161b22;
   --font-base: 'Inter', 'Segoe UI', sans-serif;
@@ -16,7 +16,7 @@
 body.dark-mode {
   --color-bg: #121212;
   --color-text: #e0e0e0;
-  --color-accent: #bb86fc;
+  --color-accent: #ffffff;
   --color-accent-light: #3700b3;
   --color-dark: #1f1f1f;
 }
@@ -64,7 +64,15 @@ p, li, a {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   background-color: var(--color-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   color: white;
   padding: 1rem;
 }
@@ -112,14 +120,16 @@ section p {
 }
 
 #hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;        /* full viewport height */
-  padding: 0 1rem;          /* just a little side padding */
-  background: var(transparent);  /* or swap in an image/gradient */
   text-align: center;
+  border-radius: 0;
+  padding: 0 1rem;          /* just a little side padding */
+  background: transparent;  /* or swap in an image/gradient */
 }
 
 #hero h1, #hero p {
@@ -330,15 +340,29 @@ footer {
   transform: translateY(0);
 }
 
+.scroll-cue {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+
 .scroll-down {
-  margin-top: 2rem;
   font-size: 2rem;
-  color: var(--color-accent_);
+  color: var(--color-accent);
   animation: bounce 2s infinite;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0) }
-  50% { transform: translateY(10px);}
+.scroll-text {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
 
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
 }
