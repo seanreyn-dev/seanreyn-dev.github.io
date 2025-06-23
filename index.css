@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #0d1117;
+  --color-bg: #ffffff;
   --color-text: #c9d1d9;
   --color-accent: #ffffff;
   --color-accent-light: #79c0ff;
@@ -14,7 +14,7 @@
 }
 
 body.dark-mode {
-  --color-bg: #121212;
+  --color-bg: #000000;
   --color-text: #e0e0e0;
   --color-accent: #ffffff;
   --color-accent-light: #3700b3;
