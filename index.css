@@ -21,6 +21,9 @@ body.dark-mode {
   --color-dark: #1f1f1f;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Reset some default styles */
 * {
   margin: 0;
@@ -315,6 +318,10 @@ section p {
 #theme-toggle:hover {
   background-color: var(--color-accent-light);
   color: var(--color-accent);
+}
+
+#about, #projects, #contact {
+  scroll-margin-top: 90px;
 }
 
 footer {
